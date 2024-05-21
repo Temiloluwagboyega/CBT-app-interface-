@@ -1,0 +1,419 @@
+body{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main-container{
+    display: flex;
+    padding: 0 20px 0 20px;
+}
+
+/***************************************
+SIDE NAVIGATION STYLING
+*************************************/
+.side-nav-container{
+    border-radius: 20px;
+    position: fixed;
+    width: fit-content;
+    overflow-y: auto;
+    z-index: 100;
+    height: 100vh;
+    transition: 500ms;
+}
+::-webkit-scrollbar{
+    opacity: 0;
+}
+.side-nav{
+    padding: 10px;
+    background: green;
+    width: fit-content;
+    border-radius: 10px;
+    transition: 400ms;
+}
+.side-nav:hover span{
+    display: block;
+}
+.side-nav:hover .nav-link{
+    gap: 10px;
+    display: flex;
+    padding:  10px 50px 10px 10px;
+
+    border-radius: 5px;
+    text-align: center;
+}
+.side-nav:hover{
+    background: rgba(0, 128, 0, 0.529);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    border-top-right-radius: 50px;
+    width: fit-content;
+    height: fit-content;
+}
+.side-nav:hover .profile{
+    display: block;
+}
+.side-nav:hover .profile img{
+    width: 100px;
+    border-radius: 100%;
+    border: 1px solid green;
+}
+.side-nav:hover .profile p{
+    display: block;
+}
+.side-nav:hover .nav{
+    gap: 20px;
+}
+.side-nav .profile img{
+    width: 40px;
+    border-radius: 100%;
+    border: 1px solid green;
+}
+.profile p{
+    display: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav{
+    display: grid;
+    gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px
+
+}
+.nav-link{
+    text-align: center;
+    transition:  400ms;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nav-link:hover{
+    border-radius: 5px;
+    transform: translateX(30px);
+}
+.nav-link a{
+    display: flex;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.nav-link span{
+    font-weight: bolder;
+}
+.nav-link i{
+    font-size: 20px;
+}
+.navbar{
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+.nav-link span{
+ display: none;
+ 
+}
+
+/**************************************
+BODY CONTAINER
+***************************************/
+.body-container{
+    padding-left: 130px;
+    width: 100%;
+}
+.heading{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.heading img{
+    width: 100px;
+    text-align: cente;
+}
+.body-container .user-greetings{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background: green;
+    display: block;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.user-greetings p,.user-greetings h2{
+    width: 100%;
+}
+.card-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    /* justify-content: center; */
+
+}
+.card i{
+    font-size: 50px;
+    color: green;
+    transition: 500ms;
+}
+.card{
+    box-shadow: 2px 2px 13px rgb(235, 228, 228);
+    width: fit-content;
+    padding: 50px 50px 20px 50px;
+    border-radius: 5px;
+    text-align: center;
+    transform: scale(1);
+    transition: 500ms;
+}
+.card:hover.card i{
+    transform: scale(0.8);
+}
+.card button{
+    background: green;
+    color: white;
+    border-radius: 10px;
+    padding:10px 60px 10px 60px;
+    border: none;
+}
+
+
+
+
+
+/********************************************
+RESULT HISTORY CONTAINER
+*****************************************/
+.result-container{
+    display: none;
+}
+.result-rating{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+
+/**************************
+PIE STYLE
+*****************************/
+.pie {
+    --p:20;
+    --b:22px;
+    --c:darkred;
+    --w:150px;
+  
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .pie:before,
+  .pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  .pie:before {
+    inset: 0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation: p 1s .5s both;
+  }
+  .no-round:before {
+    background-size: 0 0, auto;
+  }
+  .no-round:after {
+    content: none;
+  }
+  @keyframes p{
+    from{--p:0};
+  }
+  @property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+
+
+.results{
+    box-shadow: 2px 2px 10px rgb(238, 234, 234);
+    width: fit-content;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+
+   .piechart {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-image: conic-gradient(
+                    pink 70deg,
+                    lightblue 0 235deg,
+                    orange 0
+                );
+                position: relative;
+            }
+.piechart span{
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+
+
+
+/*************************************************
+RESPONSIVENESS
+**********************************************/
+  @media screen and (max-width:1240px) {
+
+    .card i{
+        font-size: 30px;
+        color: green;
+    }
+    .card{
+       
+        width: fit-content;
+        padding: 40px 40px 10px 40px;
+        border-radius: 5px;
+       text-align: center;
+    } 
+  }
+  @media screen and (max-width:1140px) {
+    .body-container{
+        padding-left: 100px;
+        width: 100%;
+    }
+    .card{
+        padding: 20px 20px 10px 20px;
+    } 
+  }
+  @media screen and (max-width:965px) {
+    .card-container{
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+    }
+  }
+  @media screen and (max-width:790px) {
+    .card-container{
+        grid-template-columns: auto auto;
+    }
+    .card i{
+        font-size: 30px;
+        color: green;
+    }
+    .card{
+       
+        width: fit-content;
+        padding: 50px 50px 20px 50px;
+        border-radius: 5px;
+        text-align: center;
+    }
+  }
+  @media screen and (max-width:705px) {
+    .card i{
+        font-size: 30px;
+        color: green;
+    }
+    .card{
+       
+        width: fit-content;
+        padding: 40px 40px 10px 40px;
+        border-radius: 5px;
+       text-align: center;
+    } 
+  }
+  @media screen and (max-width:650px) {
+    .side-nav-container .nav-link{
+        display: none;
+    }
+    .profile{
+        display: none;
+    }
+    .main-container{
+        padding: 0;
+    }
+
+    .navbar{
+        color: rgb(0, 0, 0);
+        display: block;
+        margin-top: -20px;
+        font-size: 30px;
+        /* position:absolute;
+        top: 70px; */
+        margin-left: 10px;
+    }
+    .side-nav{
+        box-shadow: none;
+        /* height: 4.5rem; */
+        position: relative;
+        /* padding: 0; */
+        background: rgba(0, 128, 0, 0);
+        margin-top: 5px;
+        width: fit-content;
+
+    }
+    .body-container{
+        padding-left: 10px
+    }
+    .navbar:hover.side-nav{
+        background: green;
+        box-shadow: 2px 2px 13px rgb(201, 199, 199);     
+        height: 100vh;
+    }
+    .navbar:hover .profile{
+        display: block;
+    }
+    .navbar:hover{
+        display: none;
+    }
+    .side-nav-container{
+        position: absolute;
+        top: 0;
+    }
+  }
+@media screen and (max-width:550px) {
+    body{
+        /* background: red; */
+    }
+    .side-container{
+        padding: 0;
+    }
+    .card i{
+        font-size: 30px;
+        color: green;
+    }
+    .card-container{
+        gap: 10px;
+    }
+    .card{
+        width: fit-content;
+        padding: 30px 30px 10px 30px;
+        border-radius: 5px;
+       text-align: center;
+    }
+    .card button{
+        background: green;
+        color: white;
+        border-radius: 10px;
+        padding:10px 50px 10px 50px;
+        border: none;
+    }
+    
+}
