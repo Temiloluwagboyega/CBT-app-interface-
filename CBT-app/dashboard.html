@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JETA CBT APP</title>
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="./">
+    <script src="./main.js"></script>
+</head>
+<body>
+<div class="main-container">
+    <div class="side-nav-container" onclick="nav()">
+        <!-- <div class="icons-nav" id="inav">
+            <img src="./user.png" alt="">
+        <i class="fa fa-home"></i>
+        <i class="fa fa-key"></i>
+        <i class="fa fa-history"></i>
+        <i class="fa fa-bar-chart"></i>
+        <i class="fa fa-ticket"></i>
+        <i class="fa fa-sign-out"></i>
+        </div> -->
+        <div class="side-nav" id="mnav">
+            <div class="nav">
+            <center>
+                <div class="profile">
+                    <img src="./user.png" alt="">
+                    <p>Temiloluwa Gboyega</p>
+                    
+                </div>
+            </center>
+            <div class="nav-link" onclick="dashboard()">
+                <i class="fa fa-home"></i>
+                <span>My Dashbpard</span>
+            </div>
+            <div class="nav-link">
+                <i class="fa fa-key"></i>
+                <span>Buy Activation Key</span>
+            </div>
+            <div class="nav-link">
+                <i class="fa fa-book"></i>
+                <span>Courses</span>
+            </div>
+            <div class="nav-link">
+                <i class="fa fa-history"></i>
+                <span>Test Taken</span>
+            </div>
+            <div class="nav-link" onclick="result()">
+                <i class="fa fa-bar-chart"></i>
+                <span>Result history</span>
+            </div>
+            <div class="nav-link">
+                <i class="fa fa-ticket"></i>
+                <span>Activities logs</span>
+            </div>
+            <div class="nav-link">
+                <a href="./sign-in.html">
+                    <i class="fa fa-sign-out"></i>
+                <span>Log out</span>
+                </a>
+            </div>
+            <i class="fa fa-navicon navbar"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="body-container">
+        <div class="heading">
+            <center> <img src="./logo.png" alt=""> <span style="color: rgb(0, 0, 0);">CBT APP</span></center>
+        </div>
+        <div class="home-container" id="home">
+         <div class="dashboard-container">
+            <div class="user-greetings">
+             <h2>Welcome {user}</h2>
+             <p>A space to take your exams and teat as a JETA studeny, with this technology it helps you to access where you are in the field you are learning</p>
+ 
+            </div>
+             <div class="card-container">
+                 <div class="card">
+                     <i class="fa fa-desktop"></i>
+                     <p>CBT Test</p>
+                     <button>View</button>
+                 </div>
+                 <div class="card">
+                     <i class="fa fa-desktop"></i>
+                     <p>CBT Test</p>
+                     <button>View</button>
+                 </div>
+                 <div class="card">
+                     <i class="fa fa-book"></i>
+                     <p>Courses</p>
+                     <button>View</button>
+                 </div>
+                 <div class="card">
+                     <i class="fa fa-desktop"></i>
+                     <p>CBT Test</p>
+                     <button>View</button>
+                 </div>
+                 <div class="card">
+                     <i class="fa fa-desktop"></i>
+                     <p>CBT Test</p>
+                     <button>View</button>
+                 </div>
+                 <div class="card">
+                     <i class="fa fa-book"></i>
+                     <p>Courses</p>
+                     <button>View</button>
+                 </div>
+                 
+             </div>
+         </div>
+     </div>
+        <div class="result-container" id="result">
+            <h1>Results</h1>
+          <div class="result-rating">
+            <div class="results">
+                <h2>Data Management</h2>
+                <div class="pie animate" style="--p:90;--c:lightgreen"> 90%</div>
+               </div>
+               <div class="results">
+                <h2>Python</h2>
+                <div class="pie animate" style="--p:40;--c:orange"> 40%</div>
+               </div>
+               <div class="results">
+                <h2>Javascript</h2>
+                <div class="pie animate" style="--p:80;--c:orange"> 80%</div>
+               </div>
+               <div class="results">
+                <h2>Data Management</h2>
+                <div class="pie animate" style="--p:90;--c:lightgreen"> 90%</div>
+               </div>
+          </div>
+          <div class="sum-result">
+            <h1>Pie chart analysis result</h1>
+            <div class="piechart">
+                <span>50%</span>
+                <span>50%</span>
+                <span>50%</span>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
